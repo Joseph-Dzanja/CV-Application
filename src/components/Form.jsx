@@ -1,6 +1,12 @@
 import '../styles/form.css'
+import { useState } from 'react'
 
 export default function Form(){
+    const[basicInfo, setBasicInfo] = useState({firstname:'',lastname:'', email:'', phoneNumber:''})
+    function handleInputChange(props, e){
+        const { id, value } = e.target;
+        setBasicInfo((basicInfo) => ({...basicInfo, [props.id]: value }));
+    }
     return(
         <form action="" className='form'>
             <div className="formHeader">
@@ -14,11 +20,11 @@ export default function Form(){
                     <label htmlFor="">Name</label>
                     <div className='nameInputs'>
                         <span id='fnameContainer'>
-                            <input type="text" id='fname'/>
+                            <input type="text" id='fname' value={basicInfo.firstname} onChange={(e) => {handleInputChange({id:'firstname'}, e)}}/>
                             <small className='littleTitles'>First Name</small>
                         </span>
                         <span id='lnameContainer'>
-                            <input type="text" id='lname'/>
+                            <input type="text" id='lname' value={basicInfo.lastname} onChange={(e) => {handleInputChange({id:'lastname'}, e)}}/>
                             <small className='littleTitles'>Last Name</small>
                         </span>
                     </div>
@@ -26,13 +32,13 @@ export default function Form(){
                 <div className="emailContainer">
                     <label htmlFor="">E-mail</label>
                     <div className="emailInput">
-                        <input type="email" id='email'/>
+                        <input type="email" id='email' value={basicInfo.email} onChange={(e) => {handleInputChange({id:'email'}, e)}}/>
                     </div>
                 </div>
                 <div className="pNumber">
                     <label htmlFor="">Phone Number</label>
                     <div className='phoneNumberInput'>
-                        <input type="tel" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}" id='phoneNumber'/>
+                        <input type="tel" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}" id='phoneNumber' value={basicInfo.phoneNumber} onChange={(e) => {handleInputChange({id:'phoneNumber'}, e)}}/>
                     </div>
                 </div>
             </div>
