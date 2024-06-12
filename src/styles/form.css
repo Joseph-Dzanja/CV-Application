@@ -4,26 +4,43 @@
     margin: 0 auto;
     padding: 2em;
     margin-top: 2em;
+    margin-bottom: 2em;
+    max-width: 1000px;
 }
 
-.formContainer{
-    
+.formHeader{
+    padding: 1.5em 0;
+}
+
+.formH1{
+    margin-bottom: .3em;
 }
 
 .namesContainer{
     margin-top: 1em;
 }
 
-.nameInputs, .emailInput, .phoneNumberInput, .primarySInput, .secondaryEInput, .tertiaryEInput, .tertiaryDates{
+.nameInputs, .emailInput, .phoneNumberInput, .primarySInput, .secondaryEInput, .tertiaryEInput, .tertiaryDates,
+.companyInput, .positionInput{
     margin: 1em 0;
 }
 
-#fname, #lname, #email, #phoneNumber, #primary, #secondary, #tertiary, #program, #startDate, #endDate{
+#fname, #lname, #email, #phoneNumber, #primary, #secondary, #tertiary, #program, #startDate, #endDate,
+#company, #position, #responsibilities{
     width: 48%;
-    padding: .5em 0;
+    padding: .8em 0;
     border-radius: 5px;
     border: 1px solid grey;
     padding-left: 1em;
+}
+
+#fname:hover, #lname:hover, #email:hover, #phoneNumber:hover, #primary:hover, #secondary:hover, #tertiary:hover, #program:hover, #startDate:hover, #endDate:hover,
+#company:hover, #position:hover, #responsibilities:hover{
+    box-shadow: 2px 2px 2px lightblue;
+}
+
+#fnameContainer, #lnameContainer, #startDateContainer, #endDateContainer{
+    width: 48%;
 }
 
 .nameInputs, .tertiaryDates{
@@ -31,7 +48,36 @@
     justify-content: space-between;
 }
 
-#primary, #secondary, #tertiary, #program{
+#fname, #lname, #startDate, #endDate, #primary, #secondary, #tertiary, #program, #company, #position, #responsibilities{
     width: 100%;    
 }
 
+.littleTitles{
+    opacity: .6;
+    padding-left: .5em;
+}
+
+#responsibilities{
+    resize: none;
+}
+
+.experienceH2, .educationH2{
+    margin-top: 2em;
+}
+
+.submit{
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.submit > button{
+    padding: 1.5em 4em;
+    background-color: #7393B3;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.submit > button:hover{
+    outline: 1px solid black;
+}

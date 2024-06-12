@@ -3,13 +3,24 @@ import '../styles/form.css'
 export default function Form(){
     return(
         <form action="" className='form'>
+            <div className="formHeader">
+                <h1 className='formH1'>Curriculum Vitae Form</h1>
+                <p>Fill out the form below and press submit to generate a CV</p>
+            </div>
+            <hr />
             <div className="formContainer">
-                <h2>Basic Information</h2>
+                <h2 className='basicH2'>Basic Information</h2>
                 <div className="namesContainer">
                     <label htmlFor="">Name</label>
                     <div className='nameInputs'>
-                        <input type="text" id='fname'/>
-                        <input type="text" id='lname'/>
+                        <span id='fnameContainer'>
+                            <input type="text" id='fname'/>
+                            <small className='littleTitles'>First Name</small>
+                        </span>
+                        <span id='lnameContainer'>
+                            <input type="text" id='lname'/>
+                            <small className='littleTitles'>Last Name</small>
+                        </span>
                     </div>
                 </div>
                 <div className="emailContainer">
@@ -25,9 +36,10 @@ export default function Form(){
                     </div>
                 </div>
             </div>
+            <br />
             <hr className='hr'/>
             <div className='formContainer'>
-                <h2>Education</h2>
+                <h2 className='educationH2'>Education</h2>
                 <label htmlFor="">Primary School</label>
                 <div className="primarySInput">
                     <input type="text" id='primary'/>
@@ -44,12 +56,30 @@ export default function Form(){
                     <input type="text" id='program' placeholder='Program of Study'/>
                 </div>
                 <div className='tertiaryDates'>
-                    <input type="date" id='startDate'/>               
-                    <input type="date" id='endDate'/>
+                    <span id='startDateContainer'>
+                        <input type="date" id='startDate'/>
+                        <small className='littleTitles'>Start Date</small> 
+                    </span>              
+                    <span id='endDateContainer'>
+                        <input type="date" id='endDate'/>
+                        <small className='littleTitles'>End Date</small>
+                    </span>
                 </div>
             </div>
+            <br />
+            <hr className='hr'/>
             <div className='formContainer'>
-                
+                <h2 className='experienceH2'>Experience</h2>
+                <div className="companyInput">
+                    <input type="text" placeholder='Company' id='company'/>
+                </div>
+                <div className="positionInput">
+                    <input type="text" placeholder='Position Title' id='position'/>
+                </div>
+                <textarea name="" id="responsibilities" cols="30" rows="10" placeholder='Responsibilities'></textarea>
+            </div>
+            <div className='formContainer submit'>
+                <button type='submit' onClick={''}>Submit</button>
             </div>
         </form>
     )
