@@ -1,0 +1,37 @@
+.form{
+    box-shadow: 2px 2px 5px 2px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+.formContainer{
+    
+}
+
+.namesContainer{
+    margin-top: 1em;
+}
+
+.nameInputs, .emailInput, .phoneNumberInput, .primarySInput, .secondaryEInput, .tertiaryEInput, .tertiaryDates{
+    margin: 1em 0;
+}
+
+#fname, #lname, #email, #phoneNumber, #primary, #secondary, #tertiary, #program, #startDate, #endDate{
+    width: 48%;
+    padding: .5em 0;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 1em;
+}
+
+.nameInputs, .tertiaryDates{
+    display: flex;
+    justify-content: space-between;
+}
+
+#primary, #secondary, #tertiary, #program{
+    width: 100%;    
+}
+
