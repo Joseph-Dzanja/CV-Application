@@ -1,2 +1,2 @@
 # CV-Application
-a small application where users can input their information and generate a CV/résumé
+a small application where users can input their information and generate a CV/résumé.
