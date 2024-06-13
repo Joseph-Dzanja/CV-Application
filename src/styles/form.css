@@ -36,7 +36,7 @@
 
 #fname:hover, #lname:hover, #email:hover, #phoneNumber:hover, #primary:hover, #secondary:hover, #tertiary:hover, #program:hover, #startDate:hover, #endDate:hover,
 #company:hover, #position:hover, #responsibilities:hover{
-    box-shadow: 2px 2px 2px lightblue;
+    box-shadow: 2px 2px 2px #1CAC78;
 }
 
 #fnameContainer, #lnameContainer, #startDateContainer, #endDateContainer{
@@ -72,7 +72,7 @@
 
 .submit > button{
     padding: 1.5em 4em;
-    background-color: #7393B3;
+    background-color: #00563B;
     color: white;
     border-radius: 5px;
     border: none;
@@ -80,4 +80,5 @@
 
 .submit > button:hover{
     outline: 1px solid black;
+    cursor: pointer;
 }
