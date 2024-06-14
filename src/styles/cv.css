@@ -1,3 +1,203 @@
-.background{
-    background-color: green;
+.background-container{
+    width: 60%;
+    margin: 2em auto;
+    background: linear-gradient(#5072A7,#5072A7)left, linear-gradient(#002D62,#002D62)right;
+    background-size: 35% 100%, 65% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    overflow-wrap: break-word;
+    min-width: 700px;
 }
+
+.left-content-container{
+    background-color: white;
+    width: 35%;
+    margin: 1em 0 1em 1em;
+}
+
+.passportImg{
+    height: 250px;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+.contact{
+    background-color: lightgray;
+    padding: 1em;
+}
+.education, .certifications, .publications{
+    padding: 1em;
+}
+.contact > p{
+    margin: 0;
+    line-height: 2;
+}
+
+.right-content-container{
+    margin: 1em 1em 1em -5px;
+    background-color: white;
+    width: 65%;
+    padding-left: 1em;
+    box-shadow: -5px 0 5px 2px gray;
+}
+.nameHeader{
+    font-size: 2rem;
+    word-spacing: 1em;
+    height: 250px;
+    padding-top: 1em;
+    padding-left: -1em;
+}
+.hRule{
+    width: 20%;
+    padding: .1em 0;
+    background-color: #002D62;
+}
+.summaryStatement > h2{
+    margin-bottom: 1em;
+}
+
+/* .background{
+    width: 80%;
+    margin: 2em auto;
+}
+.sideContainer{
+    display: flex;
+}
+.leftside{
+    flex: 0 0 40%;
+    background-color: #5072A7;
+    display: flex;
+    justify-content: stretch;
+}
+.leftside-content{
+    background-color: white;
+    margin: 1em 0 1em 1em;
+    width: 100%;
+}
+.cvImg{
+    padding: 4rem 0;
+    padding-left: 2em;
+}
+.rightside{
+    flex: 0 0 60%;
+    background-color: #002D62;
+    display: flex;
+    justify-content: stretch;
+}
+.rightside-content{
+    background-color: white;
+    margin: 1em 1em 1em 0;
+    width: 100%;
+}
+.nameHeader{
+    font-size: 2rem;
+    word-spacing: 2em;
+    padding: 4rem 0;
+}
+.hRule{
+    width: 10%;
+    padding: .1em 0;
+    background-color: #002D62;
+}
+.contact{
+    background-color: #D3D3D3;
+    line-height: 2;
+    padding: 4rem 0;
+    padding-left: 2em;
+}
+ */
+
+
+/* .background{
+    background: linear-gradient(#5072A7,#5072A7)left, linear-gradient(#002D62,#002D62)right;
+    background-size: 40% 100%, 60% 100%;
+    background-repeat: no-repeat;
+    width: 80%;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.cvContent{
+    background-color: white; 
+    display: flex;
+}
+
+.sectionOne{
+    display: flex;
+    width: 100%;
+}
+.cvImg{
+    width: 39.9%;
+}
+.nameHeader{
+    width: 61.1%;
+    font-size: 2rem;
+    word-spacing: 2em;
+}
+.hRule{
+    width: 10%;
+    padding: .1em 0;
+    background-color: #002D62;
+}
+
+.sectionTwo{
+
+}
+.leftColumn{
+    width: 39.5%;
+}
+.rightColumn{
+    width: 69.5%;
+}
+.leftColumn_Spacing{
+    padding: 2em;
+}
+
+.contact{
+    background-color: grey;
+    line-height: 2;
+}
+
+.leftside{
+    
+    flex: 2;
+}
+.rightside{
+    
+    flex: 3;
+} */
+
+/*
+<section className='sectionOne'>
+                    <div className='cvImg'>
+                        <img src={pass} alt="passport photo" />
+                    </div>
+                    <div className='nameHeader'>
+                        <h1>JOSEPH DZANJA</h1>
+                        <hr className='hRule'/>
+                    </div>
+                </section>
+                <section className='sectionTwo'>
+                    <div className='leftColumn'>
+                        <div className='leftColumn_Spacing contact'>
+                            <h2>Contact</h2>
+                            <p>Lilongwe, Malawi</p>
+                            <p>
+                                <strong>Mobile: </strong>(+265) 887 36 55 79, (+265) 999 34 21 66
+                            </p>
+                            <p>joseph2003dzanja@gmail.com</p>
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div className='rightColumn'>
+
+                    </div>
+                </section>
+*/

@@ -1,8 +1,15 @@
 import '../styles/form.css'
 import { useState } from 'react'
+import Cv from './Cv';
 
-export default function Form(){
+
+export default function Form({onSwap}){
     const[basicInfo, setBasicInfo] = useState({firstname:'',lastname:'', email:'', phoneNumber:'', primaryS:'', secondaryS:'', university:'', program:'', dateJoined:'', dateEnded:'', company:'', position:'', responsibilities:''})
+
+    const handleClick = () => {
+        onSwap(basicInfo);
+    }
+
     function handleInputChange(props, e){
         const { id, value } = e.target;
         setBasicInfo((basicInfo) => ({...basicInfo, [props.id]: value }));
@@ -85,7 +92,7 @@ export default function Form(){
                 <textarea name="" id="responsibilities" cols="30" rows="10" placeholder='Responsibilities' onChange={(e) => {handleInputChange({id:'responsibilities'}, e)}}></textarea>
             </div>
             <div className='formContainer submit'>
-                <button type='submit' onClick={''}>Submit</button>
+                <button type='submit' onClick={handleClick}>Submit</button>
             </div>
         </form>
     )
