@@ -3,8 +3,8 @@ import { useState } from 'react'
 import Cv from './Cv';
 
 
-export default function Form({onSwap}){
-    const[basicInfo, setBasicInfo] = useState({firstname:'',lastname:'', email:'', phoneNumber:'', primaryS:'', secondaryS:'', university:'', program:'', dateJoined:'', dateEnded:'', company:'', position:'', responsibilities:''})
+export default function Form({onSwap, basicInfo, setBasicInfo}){
+    
 
     const handleClick = () => {
         onSwap(basicInfo);

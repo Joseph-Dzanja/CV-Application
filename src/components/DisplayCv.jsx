@@ -4,22 +4,23 @@ import Form from "./Form";
 
 export default function Display(){
     const [showForm, setShowForm] = useState(true);
-    const [data, setData] = useState('');
+    const[basicInfo, setBasicInfo] = useState({firstname:'',lastname:'', email:'', phoneNumber:'', primaryS:'', secondaryS:'', university:'', program:'', dateJoined:'', dateEnded:'', company:'', position:'', responsibilities:''})
 
     const handleSwap = (inputData) => {
-        setData(inputData);
+        setBasicInfo(inputData);
         setShowForm(false);
     }
 
     const handleback = () => {
-        setShowForm(true)
+        // setData(data);
+        setShowForm(true);
     }
 
     return(
         <>
             {showForm ? (
-                <Form onSwap={handleSwap}/>
-            ) : (<Cv data={data} onBack={handleback} />)
+                <Form basicInfo={basicInfo} setBasicInfo={setBasicInfo} onSwap={handleSwap}/>
+            ) : (<Cv basicInfo={basicInfo} onBack={handleback} />)
             }
         </>
     )

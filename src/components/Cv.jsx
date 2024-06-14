@@ -1,7 +1,7 @@
 import '../styles/cv.css';
 import pass from '../assets/passport.jpg';
 
-export default function Cv({data, onBack}){
+export default function Cv({basicInfo, onBack}){
     return(
         <>
         <div className='background-container'>
@@ -15,12 +15,12 @@ export default function Cv({data, onBack}){
                     <p>
                         <strong>Mobile: </strong>(+265) 887 36 55 79, (+265) 999 34 21 66
                     </p>
-                    <p>joseph2003dzanja@gmail.com</p>
+                    <p>{basicInfo.email}</p>
                 </div>
                 <div className='education'>
                     <h2>Education</h2>
                     <p>
-                        Degree obtained: Field of Study <br />
+                        Degree obtained: {basicInfo.program} <br />
                         <strong>school name</strong> city and state where the school is located <br />
                         <strong>certification of additional</strong> <br />
                         <strong>Training:</strong>field of study <br />
@@ -48,7 +48,7 @@ export default function Cv({data, onBack}){
             </div>
             <div className="right-content-container">
                 <div className='nameHeader'>
-                    <h1 className='h1'>JOSEPH DZANJA</h1>
+                    <h1 className='h1'>{basicInfo.firstname} {basicInfo.lastname}</h1>
                     <hr className='hRule'/>
                 </div>
                 <div className='summaryStatement'>
@@ -82,8 +82,9 @@ export default function Cv({data, onBack}){
                     </p>
                 </div>
             </div>
+            <button onClick={onBack}>Edit</button>
         </div>
-        <button onClick={onBack}>Edit</button>
+        
         </>
     )
 }
