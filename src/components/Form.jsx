@@ -5,7 +5,6 @@ import Cv from './Cv';
 
 export default function Form({onSwap, basicInfo, setBasicInfo}){
     
-
     const handleClick = () => {
         onSwap(basicInfo);
     }
@@ -55,26 +54,26 @@ export default function Form({onSwap, basicInfo, setBasicInfo}){
                 <h2 className='educationH2'>Education</h2>
                 <label htmlFor="">Primary School</label>
                 <div className="primarySInput">
-                    <input type="text" id='primary' onChange={(e) => {handleInputChange({id:'primaryS'}, e)}}/>
+                    <input type="text" id='primary' value={basicInfo.primaryS} onChange={(e) => {handleInputChange({id:'primaryS'}, e)}}/>
                 </div>
                 <label htmlFor="">Secondary School</label>
                 <div className="secondaryEInput">
-                    <input type="text" id='secondary' onChange={(e) => {handleInputChange({id:'secondaryS'}, e)}}/>
+                    <input type="text" id='secondary' value={basicInfo.secondaryS} onChange={(e) => {handleInputChange({id:'secondaryS'}, e)}}/>
                 </div>
                 <label htmlFor="">Tertiary Education</label>
                 <div className="tertiaryEInput">
-                    <input type="text" id='tertiary' placeholder='University' onChange={(e) => {handleInputChange({id:'university'}, e)}}/>
+                    <input type="text" id='tertiary' placeholder='University' value={basicInfo.university} onChange={(e) => {handleInputChange({id:'university'}, e)}}/>
                 </div>
                 <div className="tertiaryPInput">
-                    <input type="text" id='program' placeholder='Program of Study' onChange={(e) => {handleInputChange({id:'program'}, e)}}/>
+                    <input type="text" id='program' placeholder='Program of Study' value={basicInfo.program} onChange={(e) => {handleInputChange({id:'program'}, e)}}/>
                 </div>
                 <div className='tertiaryDates'>
                     <span id='startDateContainer'>
-                        <input type="date" id='startDate' onChange={(e) => {handleInputChange({id:'dateJoined'}, e)}}/>
+                        <input type="date" id='startDate' value={basicInfo.startDate} onChange={(e) => {handleInputChange({id:'dateJoined'}, e)}}/>
                         <small className='littleTitles'>Start Date</small> 
                     </span>              
                     <span id='endDateContainer'>
-                        <input type="date" id='endDate' onChange={(e) => {handleInputChange({id:'dateEnded'}, e)}}/>
+                        <input type="date" id='endDate' value={basicInfo.endDate} onChange={(e) => {handleInputChange({id:'dateEnded'}, e)}}/>
                         <small className='littleTitles'>End Date</small>
                     </span>
                 </div>
@@ -84,12 +83,12 @@ export default function Form({onSwap, basicInfo, setBasicInfo}){
             <div className='formContainer'>
                 <h2 className='experienceH2'>Experience</h2>
                 <div className="companyInput">
-                    <input type="text" placeholder='Company' id='company' onChange={(e) => {handleInputChange({id:'company'}, e)}}/>
+                    <input type="text" placeholder='Company' id='company' value={basicInfo.company} onChange={(e) => {handleInputChange({id:'company'}, e)}}/>
                 </div>
                 <div className="positionInput">
-                    <input type="text" placeholder='Position Title' id='position' onChange={(e) => {handleInputChange({id:'position'}, e)}}/>
+                    <input type="text" placeholder='Position Title' id='position' value={basicInfo.position} onChange={(e) => {handleInputChange({id:'position'}, e)}}/>
                 </div>
-                <textarea name="" id="responsibilities" cols="30" rows="10" placeholder='Responsibilities' onChange={(e) => {handleInputChange({id:'responsibilities'}, e)}}></textarea>
+                <textarea name="" id="responsibilities" cols="30" rows="10" value={basicInfo.responsibilities} placeholder='Responsibilities' onChange={(e) => {handleInputChange({id:'responsibilities'}, e)}}></textarea>
             </div>
             <div className='formContainer submit'>
                 <button type='submit' onClick={handleClick}>Submit</button>

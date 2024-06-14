@@ -13,7 +13,7 @@ export default function Cv({basicInfo, onBack}){
                     <h2>Contact</h2>
                     <p>Lilongwe, Malawi</p>
                     <p>
-                        <strong>Mobile: </strong>(+265) 887 36 55 79, (+265) 999 34 21 66
+                        <strong>Mobile: </strong>(+265) {basicInfo.phoneNumber}, (+265) 999 34 21 66
                     </p>
                     <p>{basicInfo.email}</p>
                 </div>
@@ -66,7 +66,7 @@ export default function Cv({basicInfo, onBack}){
                 <div className="wExperience">
                     <h2>Work Experience</h2>
                     <p>
-                        Date-Date <br />
+                        {basicInfo.dateJoined} to {basicInfo.dateEnded} <br />
                         <strong>Position, Company</strong>, Company City, Company State <br />
                         <ul>
                             <li>3</li>
